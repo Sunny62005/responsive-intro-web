@@ -50,14 +50,23 @@ const Personal = () => {
       try {
         const response = await fetch('/src/data/data.json');
         const data = await response.json();
-        setHobbies(data.hobbies);
-        setRoleModels(data.roleModels);
-        setBooks(data.books);
-        setWebsites(data.websites);
-        setStartups(data.startups);
-        setVolunteering(data.volunteering);
+        
+        // Set data with null checks
+        setHobbies(data.hobbies || []);
+        setRoleModels(data.roleModels || []);
+        setBooks(data.books || []);
+        setWebsites(data.websites || []);
+        setStartups(data.startups || []);
+        setVolunteering(data.volunteering || []);
       } catch (error) {
         console.error('Error fetching data:', error);
+        // Initialize with empty arrays on error
+        setHobbies([]);
+        setRoleModels([]);
+        setBooks([]);
+        setWebsites([]);
+        setStartups([]);
+        setVolunteering([]);
       } finally {
         setIsLoading(false);
       }
@@ -98,95 +107,119 @@ const Personal = () => {
           <TabsContent value="hobbies">
             <h2 className="text-3xl font-bold mb-8">My Hobbies</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {hobbies.map((hobby, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow">
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold mb-2">{hobby.name}</h3>
-                    <p className="text-gray-600">{hobby.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
+              {hobbies && hobbies.length > 0 ? (
+                hobbies.map((hobby, index) => (
+                  <Card key={index} className="hover:shadow-lg transition-shadow">
+                    <CardContent className="p-6">
+                      <h3 className="text-xl font-bold mb-2">{hobby.name}</h3>
+                      <p className="text-gray-600">{hobby.description}</p>
+                    </CardContent>
+                  </Card>
+                ))
+              ) : (
+                <p className="col-span-3 text-center text-gray-500">No hobbies available</p>
+              )}
             </div>
           </TabsContent>
           
           <TabsContent value="roleModels">
             <h2 className="text-3xl font-bold mb-8">Role Models</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {roleModels.map((model, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow">
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold mb-2">{model.name}</h3>
-                    <p className="text-gray-600">{model.reason}</p>
-                  </CardContent>
-                </Card>
-              ))}
+              {roleModels && roleModels.length > 0 ? (
+                roleModels.map((model, index) => (
+                  <Card key={index} className="hover:shadow-lg transition-shadow">
+                    <CardContent className="p-6">
+                      <h3 className="text-xl font-bold mb-2">{model.name}</h3>
+                      <p className="text-gray-600">{model.reason}</p>
+                    </CardContent>
+                  </Card>
+                ))
+              ) : (
+                <p className="col-span-3 text-center text-gray-500">No role models available</p>
+              )}
             </div>
           </TabsContent>
           
           <TabsContent value="books">
             <h2 className="text-3xl font-bold mb-8">Favorite Books</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {books.map((book, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow">
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold mb-2">{book.title}</h3>
-                    <p className="text-gray-600 mb-2">by {book.author}</p>
-                    <p className="text-gray-600">{book.reason}</p>
-                  </CardContent>
-                </Card>
-              ))}
+              {books && books.length > 0 ? (
+                books.map((book, index) => (
+                  <Card key={index} className="hover:shadow-lg transition-shadow">
+                    <CardContent className="p-6">
+                      <h3 className="text-xl font-bold mb-2">{book.title}</h3>
+                      <p className="text-gray-600 mb-2">by {book.author}</p>
+                      <p className="text-gray-600">{book.reason}</p>
+                    </CardContent>
+                  </Card>
+                ))
+              ) : (
+                <p className="col-span-3 text-center text-gray-500">No favorite books available</p>
+              )}
             </div>
           </TabsContent>
           
           <TabsContent value="websites">
             <h2 className="text-3xl font-bold mb-8">Favorite Websites</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {websites.map((site, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow">
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold mb-2">
-                      <a 
-                        href={site.url}
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="text-purple-600 hover:underline"
-                      >
-                        {site.name}
-                      </a>
-                    </h3>
-                    <p className="text-gray-600">{site.reason}</p>
-                  </CardContent>
-                </Card>
-              ))}
+              {websites && websites.length > 0 ? (
+                websites.map((site, index) => (
+                  <Card key={index} className="hover:shadow-lg transition-shadow">
+                    <CardContent className="p-6">
+                      <h3 className="text-xl font-bold mb-2">
+                        <a 
+                          href={site.url}
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="text-purple-600 hover:underline"
+                        >
+                          {site.name}
+                        </a>
+                      </h3>
+                      <p className="text-gray-600">{site.reason}</p>
+                    </CardContent>
+                  </Card>
+                ))
+              ) : (
+                <p className="col-span-3 text-center text-gray-500">No favorite websites available</p>
+              )}
             </div>
           </TabsContent>
           
           <TabsContent value="startups">
             <h2 className="text-3xl font-bold mb-8">Favorite Startups</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {startups.map((startup, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow">
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold mb-2">{startup.name}</h3>
-                    <p className="text-gray-600">{startup.reason}</p>
-                  </CardContent>
-                </Card>
-              ))}
+              {startups && startups.length > 0 ? (
+                startups.map((startup, index) => (
+                  <Card key={index} className="hover:shadow-lg transition-shadow">
+                    <CardContent className="p-6">
+                      <h3 className="text-xl font-bold mb-2">{startup.name}</h3>
+                      <p className="text-gray-600">{startup.reason}</p>
+                    </CardContent>
+                  </Card>
+                ))
+              ) : (
+                <p className="col-span-3 text-center text-gray-500">No favorite startups available</p>
+              )}
             </div>
           </TabsContent>
           
           <TabsContent value="volunteering">
             <h2 className="text-3xl font-bold mb-8">Volunteering Experience</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {volunteering.map((volunteer, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow">
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold mb-2">{volunteer.organization}</h3>
-                    <p className="text-purple-600 mb-4">{volunteer.role}</p>
-                    <p className="text-gray-600">{volunteer.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
+              {volunteering && volunteering.length > 0 ? (
+                volunteering.map((volunteer, index) => (
+                  <Card key={index} className="hover:shadow-lg transition-shadow">
+                    <CardContent className="p-6">
+                      <h3 className="text-xl font-bold mb-2">{volunteer.organization}</h3>
+                      <p className="text-purple-600 mb-4">{volunteer.role}</p>
+                      <p className="text-gray-600">{volunteer.description}</p>
+                    </CardContent>
+                  </Card>
+                ))
+              ) : (
+                <p className="col-span-2 text-center text-gray-500">No volunteering experience available</p>
+              )}
             </div>
           </TabsContent>
         </Tabs>
