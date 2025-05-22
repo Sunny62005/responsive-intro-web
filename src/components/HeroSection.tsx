@@ -2,6 +2,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import { ShoppingBag } from "lucide-react";
 
 const HeroSection = () => {
   const navigate = useNavigate();
@@ -32,6 +33,15 @@ const HeroSection = () => {
               className="border-white text-white hover:bg-white/10"
             >
               Get in Touch
+            </Button>
+            <Button
+              onClick={() => navigate("/shop")}
+              size="lg"
+              variant="secondary"
+              className="bg-purple-700 text-white hover:bg-purple-800 border-purple-600"
+            >
+              <ShoppingBag className="mr-2 h-5 w-5" />
+              Visit Shop
             </Button>
           </div>
         </div>
