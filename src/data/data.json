@@ -1,0 +1,161 @@
+
+{
+  "profile": {
+    "name": "Alex Johnson",
+    "title": "Software Developer",
+    "location": "San Francisco, CA",
+    "email": "alex@example.com",
+    "phone": "+1 (123) 456-7890",
+    "bio": "Passionate developer with 5 years of experience building web applications. I love creating elegant solutions to complex problems.",
+    "photo": "/placeholder.svg",
+    "videoIntro": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  },
+  "education": [
+    {
+      "degree": "Master of Computer Science",
+      "institution": "Stanford University",
+      "year": "2018 - 2020"
+    },
+    {
+      "degree": "Bachelor of Science in Information Technology",
+      "institution": "MIT",
+      "year": "2014 - 2018"
+    }
+  ],
+  "languages": [
+    {
+      "name": "English",
+      "proficiency": "Native"
+    },
+    {
+      "name": "Spanish",
+      "proficiency": "Fluent"
+    },
+    {
+      "name": "French",
+      "proficiency": "Intermediate"
+    }
+  ],
+  "achievements": [
+    {
+      "title": "First Prize - Global Hackathon 2022",
+      "description": "Led a team that developed an AI-powered solution for climate change monitoring."
+    },
+    {
+      "title": "Outstanding Research Award",
+      "description": "Recognized for contributions to distributed systems research."
+    },
+    {
+      "title": "Open Source Contributor",
+      "description": "Contributed to several popular open source projects including React and Node.js."
+    }
+  ],
+  "futureGoals": [
+    {
+      "title": "Build a Tech Startup",
+      "description": "Create innovative solutions that address pressing global challenges."
+    },
+    {
+      "title": "Mentor 100+ Developers",
+      "description": "Give back to the community by mentoring aspiring developers."
+    },
+    {
+      "title": "Write a Book on Modern Web Development",
+      "description": "Share knowledge and experiences with the wider development community."
+    }
+  ],
+  "hobbies": [
+    {
+      "name": "Photography",
+      "description": "Capturing landscapes and street life allows me to see the world through a different lens."
+    },
+    {
+      "name": "Hiking",
+      "description": "Exploring nature trails helps me disconnect and find inspiration."
+    },
+    {
+      "name": "Chess",
+      "description": "Strategic thinking and planning that translates well to problem-solving in code."
+    }
+  ],
+  "roleModels": [
+    {
+      "name": "Ada Lovelace",
+      "reason": "The first computer programmer who saw beyond the calculator to the computer's potential."
+    },
+    {
+      "name": "Elon Musk",
+      "reason": "His ambitious vision and relentless drive to solve humanity's biggest challenges."
+    },
+    {
+      "name": "Grace Hopper",
+      "reason": "Pioneer in computer programming who invented one of the first compiler tools."
+    }
+  ],
+  "books": [
+    {
+      "title": "Sapiens: A Brief History of Humankind",
+      "author": "Yuval Noah Harari",
+      "reason": "Changed my perspective on human history and our collective future."
+    },
+    {
+      "title": "Clean Code",
+      "author": "Robert C. Martin",
+      "reason": "Shaped how I approach software development and code quality."
+    },
+    {
+      "title": "The Innovators",
+      "author": "Walter Isaacson",
+      "reason": "Inspiring stories of the digital revolution's pioneers."
+    }
+  ],
+  "websites": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com",
+      "reason": "The heart of open source collaboration and code sharing."
+    },
+    {
+      "name": "Stack Overflow",
+      "url": "https://stackoverflow.com",
+      "reason": "An invaluable resource for solving programming challenges."
+    },
+    {
+      "name": "Hacker News",
+      "url": "https://news.ycombinator.com",
+      "reason": "Keeps me updated on the latest in tech and startups."
+    }
+  ],
+  "startups": [
+    {
+      "name": "Stripe",
+      "reason": "Revolutionized online payments with developer-friendly APIs."
+    },
+    {
+      "name": "Notion",
+      "reason": "Reimagined productivity tools for the modern workplace."
+    },
+    {
+      "name": "Vercel",
+      "reason": "Made frontend deployment and optimization incredibly accessible."
+    }
+  ],
+  "volunteering": [
+    {
+      "organization": "Code.org",
+      "role": "Volunteer Teacher",
+      "description": "Teaching programming basics to middle school students."
+    },
+    {
+      "organization": "Tech for Good",
+      "role": "Developer",
+      "description": "Building websites for non-profit organizations."
+    }
+  ],
+  "socialLinks": {
+    "github": "https://github.com/alexjohnson",
+    "linkedin": "https://linkedin.com/in/alexjohnson",
+    "twitter": "https://twitter.com/alexjohnson",
+    "instagram": "https://instagram.com/alexjohnson"
+  }
+}
