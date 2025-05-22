@@ -59,10 +59,10 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Connect</h3>
             <div className="flex flex-wrap gap-4">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400">
+              <a href="https://github.com/sunnypharande" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400">
                 GitHub
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400">
+              <a href="https://www.instgram.com/sunnypharande" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400">
                 Instagram
               </a>
             </div>
