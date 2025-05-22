@@ -30,19 +30,12 @@ interface Startup {
   reason: string;
 }
 
-interface Volunteer {
-  organization: string;
-  role: string;
-  description: string;
-}
-
 const Personal = () => {
   const [hobbies, setHobbies] = useState<Hobby[]>([]);
   const [roleModels, setRoleModels] = useState<RoleModel[]>([]);
   const [books, setBooks] = useState<Book[]>([]);
   const [websites, setWebsites] = useState<Website[]>([]);
   const [startups, setStartups] = useState<Startup[]>([]);
-  const [volunteering, setVolunteering] = useState<Volunteer[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   
   useEffect(() => {
@@ -57,7 +50,6 @@ const Personal = () => {
         setBooks(data.books || []);
         setWebsites(data.websites || []);
         setStartups(data.startups || []);
-        setVolunteering(data.volunteering || []);
       } catch (error) {
         console.error('Error fetching data:', error);
         // Initialize with empty arrays on error
@@ -66,7 +58,6 @@ const Personal = () => {
         setBooks([]);
         setWebsites([]);
         setStartups([]);
-        setVolunteering([]);
       } finally {
         setIsLoading(false);
       }
@@ -95,13 +86,12 @@ const Personal = () => {
       
       <div className="container mx-auto px-4 py-12">
         <Tabs defaultValue="hobbies" className="w-full">
-          <TabsList className="grid grid-cols-3 md:grid-cols-6 mb-8">
+          <TabsList className="grid grid-cols-3 md:grid-cols-5 mb-8">
             <TabsTrigger value="hobbies">Hobbies</TabsTrigger>
             <TabsTrigger value="roleModels">Role Models</TabsTrigger>
             <TabsTrigger value="books">Books</TabsTrigger>
             <TabsTrigger value="websites">Websites</TabsTrigger>
             <TabsTrigger value="startups">Startups</TabsTrigger>
-            <TabsTrigger value="volunteering">Volunteering</TabsTrigger>
           </TabsList>
           
           <TabsContent value="hobbies">
@@ -200,25 +190,6 @@ const Personal = () => {
                 ))
               ) : (
                 <p className="col-span-3 text-center text-gray-500">No favorite startups available</p>
-              )}
-            </div>
-          </TabsContent>
-          
-          <TabsContent value="volunteering">
-            <h2 className="text-3xl font-bold mb-8">Volunteering Experience</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {volunteering && volunteering.length > 0 ? (
-                volunteering.map((volunteer, index) => (
-                  <Card key={index} className="hover:shadow-lg transition-shadow">
-                    <CardContent className="p-6">
-                      <h3 className="text-xl font-bold mb-2">{volunteer.organization}</h3>
-                      <p className="text-purple-600 mb-4">{volunteer.role}</p>
-                      <p className="text-gray-600">{volunteer.description}</p>
-                    </CardContent>
-                  </Card>
-                ))
-              ) : (
-                <p className="col-span-2 text-center text-gray-500">No volunteering experience available</p>
               )}
             </div>
           </TabsContent>
