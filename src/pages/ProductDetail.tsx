@@ -15,6 +15,15 @@ const ProductDetail = () => {
   const { addItem } = useCartStore();
   
   const product = products.find(p => p.id === Number(id));
+
+  // Format price in Indian Rupee format
+  const formatPrice = (price: number) => {
+    return new Intl.NumberFormat('en-IN', { 
+      style: 'currency', 
+      currency: 'INR',
+      maximumFractionDigits: 0
+    }).format(price);
+  };
   
   if (!product) {
     return (
@@ -64,8 +73,8 @@ const ProductDetail = () => {
           
           <div>
             <h1 className="text-3xl font-bold mb-2">{product.name}</h1>
-            <div className="text-xl font-semibold text-purple-600 mb-4">
-              ${product.price.toFixed(2)}
+            <div className="text-xl font-semibold text-teal-600 mb-4">
+              {formatPrice(product.price)}
             </div>
             
             <p className="text-muted-foreground mb-6">
@@ -74,14 +83,14 @@ const ProductDetail = () => {
             
             <div className="mb-6">
               <h3 className="font-medium mb-2">Category</h3>
-              <div className="inline-block bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 px-3 py-1 rounded-full text-sm">
+              <div className="inline-block bg-teal-100 dark:bg-teal-900/30 text-teal-800 dark:text-teal-300 px-3 py-1 rounded-full text-sm">
                 {product.category}
               </div>
             </div>
             
             <div className="space-y-4">
               <Button 
-                className="w-full bg-purple-600 hover:bg-purple-700"
+                className="w-full bg-teal-600 hover:bg-teal-700"
                 onClick={handleAddToCart}
               >
                 <ShoppingCart className="mr-2 h-4 w-4" />

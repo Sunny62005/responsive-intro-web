@@ -45,8 +45,8 @@ const Achievements = () => {
   }
   
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="py-12 bg-gradient-to-r from-blue-500 to-purple-600">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <div className="py-12 bg-gradient-to-r from-blue-500 to-teal-600">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold text-white">Achievements & Goals</h1>
         </div>
@@ -59,9 +59,9 @@ const Achievements = () => {
             {achievements.map((achievement, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
-                  <div className="text-purple-600 font-bold text-5xl mb-4">#{index + 1}</div>
+                  <div className="text-teal-600 font-bold text-5xl mb-4">#{index + 1}</div>
                   <h3 className="text-xl font-bold mb-2">{achievement.title}</h3>
-                  <p className="text-gray-600">{achievement.description}</p>
+                  <p className="text-gray-600 dark:text-gray-400">{achievement.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -74,15 +74,15 @@ const Achievements = () => {
             {goals.map((goal, index) => (
               <div key={index} className="relative">
                 {index < goals.length - 1 && (
-                  <div className="absolute left-6 top-12 bottom-0 w-1 bg-purple-200"></div>
+                  <div className="absolute left-6 top-12 bottom-0 w-1 bg-teal-200 dark:bg-teal-800"></div>
                 )}
                 <div className="flex gap-6">
-                  <div className="bg-purple-600 text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0 z-10">
+                  <div className="bg-teal-600 text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0 z-10">
                     {index + 1}
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-2">{goal.title}</h3>
-                    <p className="text-gray-600 mb-6">{goal.description}</p>
+                    <p className="text-gray-600 dark:text-gray-400 mb-6">{goal.description}</p>
                   </div>
                 </div>
               </div>

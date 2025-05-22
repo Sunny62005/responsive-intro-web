@@ -56,8 +56,8 @@ const About = () => {
   }
   
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="py-12 bg-gradient-to-r from-purple-600 to-blue-500">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <div className="py-12 bg-gradient-to-r from-teal-600 to-blue-500">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold text-white">About Me</h1>
         </div>
@@ -68,16 +68,9 @@ const About = () => {
           <div className="lg:col-span-1">
             <Card>
               <CardContent className="p-6">
-                <div className="mb-6 flex justify-center">
-                  <img 
-                    src={profileData?.photo} 
-                    alt={profileData?.name} 
-                    className="rounded-full w-48 h-48 object-cover border-4 border-white shadow-lg"
-                  />
-                </div>
                 <h2 className="text-2xl font-bold text-center">{profileData?.name}</h2>
-                <p className="text-center text-gray-600">{profileData?.title}</p>
-                <p className="text-center text-gray-600 mt-2">{profileData?.location}</p>
+                <p className="text-center text-gray-600 dark:text-gray-400">{profileData?.title}</p>
+                <p className="text-center text-gray-600 dark:text-gray-400 mt-2">{profileData?.location}</p>
 
                 <div className="mt-8">
                   <h3 className="text-lg font-semibold mb-4">Languages</h3>
@@ -85,7 +78,7 @@ const About = () => {
                     {languages.map((language, index) => (
                       <div key={index} className="flex justify-between">
                         <span>{language.name}</span>
-                        <span className="text-gray-600">{language.proficiency}</span>
+                        <span className="text-gray-600 dark:text-gray-400">{language.proficiency}</span>
                       </div>
                     ))}
                   </div>
@@ -97,18 +90,13 @@ const About = () => {
           <div className="lg:col-span-2">
             <Card>
               <CardContent className="p-6">
-                <h2 className="text-2xl font-bold mb-4">Biography</h2>
-                <p className="text-gray-700 mb-8">
-                  {profileData?.bio}
-                </p>
-                
                 <h2 className="text-2xl font-bold mb-4">Education</h2>
                 <div className="space-y-6">
                   {education.map((edu, index) => (
-                    <div key={index} className="border-l-4 border-purple-600 pl-4">
+                    <div key={index} className="border-l-4 border-teal-600 pl-4">
                       <h3 className="font-bold text-lg">{edu.degree}</h3>
-                      <p className="text-gray-600">{edu.institution}</p>
-                      <p className="text-gray-600">{edu.year}</p>
+                      <p className="text-gray-600 dark:text-gray-400">{edu.institution}</p>
+                      <p className="text-gray-600 dark:text-gray-400">{edu.year}</p>
                     </div>
                   ))}
                 </div>
@@ -120,7 +108,7 @@ const About = () => {
                       <h3 className="font-semibold mb-2">Programming Languages</h3>
                       <div className="flex flex-wrap gap-2">
                         {["JavaScript", "TypeScript", "Python", "Java", "C++"].map((skill, index) => (
-                          <span key={index} className="bg-gray-100 px-3 py-1 rounded-full text-sm">
+                          <span key={index} className="bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full text-sm">
                             {skill}
                           </span>
                         ))}
@@ -131,7 +119,7 @@ const About = () => {
                       <h3 className="font-semibold mb-2">Frameworks</h3>
                       <div className="flex flex-wrap gap-2">
                         {["React", "Node.js", "Express", "Django", "Spring Boot"].map((skill, index) => (
-                          <span key={index} className="bg-gray-100 px-3 py-1 rounded-full text-sm">
+                          <span key={index} className="bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full text-sm">
                             {skill}
                           </span>
                         ))}
@@ -142,7 +130,7 @@ const About = () => {
                       <h3 className="font-semibold mb-2">Tools</h3>
                       <div className="flex flex-wrap gap-2">
                         {["Git", "Docker", "AWS", "Figma", "Jira"].map((skill, index) => (
-                          <span key={index} className="bg-gray-100 px-3 py-1 rounded-full text-sm">
+                          <span key={index} className="bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full text-sm">
                             {skill}
                           </span>
                         ))}
@@ -153,7 +141,7 @@ const About = () => {
                       <h3 className="font-semibold mb-2">Other</h3>
                       <div className="flex flex-wrap gap-2">
                         {["UI/UX Design", "Project Management", "Agile", "DevOps", "Testing"].map((skill, index) => (
-                          <span key={index} className="bg-gray-100 px-3 py-1 rounded-full text-sm">
+                          <span key={index} className="bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full text-sm">
                             {skill}
                           </span>
                         ))}

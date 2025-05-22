@@ -1,44 +1,39 @@
 
 {
   "profile": {
-    "name": "Alex Johnson",
+    "name": "Sunny Pharande",
     "title": "Software Developer",
-    "location": "San Francisco, CA",
-    "email": "alex@example.com",
-    "phone": "+1 (123) 456-7890",
-    "bio": "Passionate developer with 5 years of experience building web applications. I love creating elegant solutions to complex problems.",
-    "photo": "/placeholder.svg",
-    "videoIntro": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    "location": "Palghar, Maharashtra",
+    "email": "sunnypharande777@gmail.com",
+    "phone": "8847782768",
+    "bio": "",
+    "photo": "",
+    "videoIntro": "https://www.youtube.com/embed/HXHphpDJ9T0?si=03oqu9YuNm7RUUKo"
   },
   "education": [
     {
-      "degree": "Master of Computer Science",
+      "degree": "Computer Engineering",
       "institution": "Stanford University",
       "year": "2018 - 2020"
-    },
-    {
-      "degree": "Bachelor of Science in Information Technology",
-      "institution": "MIT",
-      "year": "2014 - 2018"
     }
   ],
   "languages": [
     {
       "name": "English",
-      "proficiency": "Native"
-    },
-    {
-      "name": "Spanish",
       "proficiency": "Fluent"
     },
     {
-      "name": "French",
-      "proficiency": "Intermediate"
+      "name": "Hindi",
+      "proficiency": "Native"
+    },
+    {
+      "name": "Marathi",
+      "proficiency": "Native"
     }
   ],
   "achievements": [
     {
-      "title": "First Prize - Global Hackathon 2022",
+      "title": "First Prize - Global Hackathon 2024",
       "description": "Led a team that developed an AI-powered solution for climate change monitoring."
     },
     {
@@ -140,22 +135,8 @@
       "reason": "Made frontend deployment and optimization incredibly accessible."
     }
   ],
-  "volunteering": [
-    {
-      "organization": "Code.org",
-      "role": "Volunteer Teacher",
-      "description": "Teaching programming basics to middle school students."
-    },
-    {
-      "organization": "Tech for Good",
-      "role": "Developer",
-      "description": "Building websites for non-profit organizations."
-    }
-  ],
   "socialLinks": {
-    "github": "https://github.com/alexjohnson",
-    "linkedin": "https://linkedin.com/in/alexjohnson",
-    "twitter": "https://twitter.com/alexjohnson",
-    "instagram": "https://instagram.com/alexjohnson"
+    "github": "https://github.com/sunnypharande",
+    "instagram": "https://instagram.com/sunnypharande"
   }
 }

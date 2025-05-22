@@ -8,21 +8,21 @@ const HeroSection = () => {
   const navigate = useNavigate();
   
   return (
-    <div className="relative bg-gradient-to-r from-purple-600 to-blue-500">
+    <div className="relative bg-gradient-to-r from-teal-600 to-blue-500">
       <div className="container mx-auto px-4 py-24 md:py-32">
         <div className="max-w-2xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             Welcome to My Portfolio
           </h1>
           <p className="text-lg md:text-xl text-white/90 mb-8">
-            Hi, I'm Alex Johnson. I'm passionate about creating
+            Hi, I'm Sunny Pharande. I'm passionate about creating
             beautiful digital experiences and solving complex problems with elegant solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button 
               onClick={() => navigate("/about")}
               size="lg" 
-              className="bg-white text-purple-600 hover:bg-gray-100"
+              className="bg-white text-teal-600 hover:bg-gray-100"
             >
               Learn About Me
             </Button>
@@ -38,7 +38,7 @@ const HeroSection = () => {
               onClick={() => navigate("/shop")}
               size="lg"
               variant="secondary"
-              className="bg-purple-700 text-white hover:bg-purple-800 border-purple-600"
+              className="bg-teal-700 text-white hover:bg-teal-800 border-teal-600"
             >
               <ShoppingBag className="mr-2 h-5 w-5" />
               Visit Shop

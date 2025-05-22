@@ -54,7 +54,7 @@ const Index = () => {
             <h2 className="text-3xl font-bold mb-6">About Me</h2>
             <ProfileCard />
             <div className="mt-8 flex">
-              <Button onClick={() => navigate("/about")} className="bg-purple-600 hover:bg-purple-700">
+              <Button onClick={() => navigate("/about")} className="bg-teal-600 hover:bg-teal-700">
                 Learn More
               </Button>
             </div>
@@ -66,7 +66,7 @@ const Index = () => {
               <CardContent className="p-0">
                 <div className="aspect-video">
                   <iframe
-                    src={profileData?.videoIntro}
+                    src="https://www.youtube.com/embed/HXHphpDJ9T0?si=03oqu9YuNm7RUUKo"
                     title="Video Introduction"
                     className="w-full h-full"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -84,7 +84,7 @@ const Index = () => {
             <Card className="hover:shadow-lg transition-shadow">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-2">Achievements</h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 dark:text-gray-400 mb-4">
                   Explore my professional accomplishments and recognitions.
                 </p>
                 <Button variant="outline" onClick={() => navigate("/achievements")} className="w-full">
@@ -96,7 +96,7 @@ const Index = () => {
             <Card className="hover:shadow-lg transition-shadow">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-2">Personal Interests</h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 dark:text-gray-400 mb-4">
                   Learn about my hobbies, favorite books, and role models.
                 </p>
                 <Button variant="outline" onClick={() => navigate("/personal")} className="w-full">
@@ -108,7 +108,7 @@ const Index = () => {
             <Card className="hover:shadow-lg transition-shadow">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-2">Contact Me</h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 dark:text-gray-400 mb-4">
                   Get in touch for collaboration opportunities or just to say hi!
                 </p>
                 <Button variant="outline" onClick={() => navigate("/contact")} className="w-full">

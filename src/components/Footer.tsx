@@ -59,16 +59,10 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Connect</h3>
             <div className="flex flex-wrap gap-4">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400">
                 GitHub
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400">
-                LinkedIn
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400">
-                Twitter
-              </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400">
                 Instagram
               </a>
             </div>
@@ -76,7 +70,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} My Portfolio. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Sunny Pharande. All rights reserved.</p>
         </div>
       </div>
     </footer>

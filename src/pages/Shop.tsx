@@ -40,9 +40,18 @@ const Shop = () => {
     });
   };
 
+  // Format price in Indian Rupee format
+  const formatPrice = (price: number) => {
+    return new Intl.NumberFormat('en-IN', { 
+      style: 'currency', 
+      currency: 'INR',
+      maximumFractionDigits: 0
+    }).format(price);
+  };
+
   return (
     <div className="min-h-screen bg-background">
-      <section className="py-12 bg-gradient-to-r from-purple-500 to-blue-500">
+      <section className="py-12 bg-gradient-to-r from-teal-500 to-blue-500">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">Tech & Lifestyle Shop</h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
@@ -76,7 +85,7 @@ const Shop = () => {
             <ShoppingCart className="mr-2 h-4 w-4" />
             View Cart
             {items.length > 0 && (
-              <span className="absolute -top-2 -right-2 bg-purple-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+              <span className="absolute -top-2 -right-2 bg-teal-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                 {items.length}
               </span>
             )}
@@ -96,7 +105,7 @@ const Shop = () => {
               </div>
               <CardContent className="p-4">
                 <h3 className="font-bold text-lg">{product.name}</h3>
-                <p className="text-purple-600 font-semibold">${product.price.toFixed(2)}</p>
+                <p className="text-teal-600 font-semibold">{formatPrice(product.price)}</p>
                 <p className="text-sm text-muted-foreground line-clamp-2 mt-1">
                   {product.description}
                 </p>
@@ -111,7 +120,7 @@ const Shop = () => {
                 </Button>
                 <Button 
                   onClick={() => handleAddToCart(product.id)}
-                  className="bg-purple-600 hover:bg-purple-700"
+                  className="bg-teal-600 hover:bg-teal-700"
                   size="sm"
                 >
                   Add to Cart
@@ -154,7 +163,7 @@ const Shop = () => {
                         <div className="flex justify-between items-center mt-1">
                           <div className="flex items-center">
                             <span className="text-sm text-muted-foreground mr-2">Qty: {item.quantity}</span>
-                            <span className="font-medium">${(item.product.price * item.quantity).toFixed(2)}</span>
+                            <span className="font-medium">{formatPrice(item.product.price * item.quantity)}</span>
                           </div>
                           <Button 
                             size="sm" 
@@ -174,11 +183,11 @@ const Shop = () => {
               <div className="mt-6 border-t pt-4">
                 <div className="flex justify-between mb-4">
                   <span className="font-medium">Total</span>
-                  <span className="font-bold text-lg">${total.toFixed(2)}</span>
+                  <span className="font-bold text-lg">{formatPrice(total)}</span>
                 </div>
                 
                 <Button 
-                  className="w-full bg-purple-600 hover:bg-purple-700"
+                  className="w-full bg-teal-600 hover:bg-teal-700"
                   disabled={items.length === 0}
                   onClick={() => {
                     toast({
