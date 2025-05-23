@@ -62,7 +62,7 @@ const Footer = () => {
               <a href="https://github.com/Sunny62005" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400">
                 GitHub
               </a>
-              <a href="https://www.instagram.com/sunnypharande" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400">
+              <a href="https://www.instgram.com/sunnypharande" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400">
                 Instagram
               </a>
             </div>

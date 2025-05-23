@@ -6,14 +6,16 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { ShoppingCart, X } from "lucide-react";
 import { useCartStore } from "@/store/cartStore";
 import { useToast } from "@/components/ui/use-toast";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
+import ShareButton from "@/components/ShareButton";
 
 const Shop = () => {
   const { items, addItem, removeItem, total } = useCartStore();
   const [showCart, setShowCart] = useState(false);
   const [category, setCategory] = useState<string | null>(null);
   const { toast } = useToast();
+  const navigate = useNavigate();
   
   const filteredProducts = category 
     ? allProducts.filter(product => product.category === category)
@@ -49,6 +51,11 @@ const Shop = () => {
     }).format(price);
   };
 
+  const handleCheckout = () => {
+    setShowCart(false);
+    navigate("/shop/checkout");
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <section className="py-12 bg-gradient-to-r from-teal-500 to-blue-500">
@@ -57,6 +64,12 @@ const Shop = () => {
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
             Discover premium products for tech enthusiasts and modern lifestyles.
           </p>
+          <div className="mt-6">
+            <ShareButton 
+              title="Check out this amazing tech shop!"
+              text="I found this awesome tech and lifestyle shop. Check it out!"
+            />
+          </div>
         </div>
       </section>
 
@@ -101,6 +114,7 @@ const Shop = () => {
                   src={product.image}
                   alt={product.name}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  loading="lazy"
                 />
               </div>
               <CardContent className="p-4">
@@ -156,6 +170,7 @@ const Shop = () => {
                           src={item.product.image}
                           alt={item.product.name}
                           className="w-full h-full object-cover"
+                          loading="lazy"
                         />
                       </div>
                       <div className="flex-1">
@@ -186,18 +201,23 @@ const Shop = () => {
                   <span className="font-bold text-lg">{formatPrice(total)}</span>
                 </div>
                 
-                <Button 
-                  className="w-full bg-teal-600 hover:bg-teal-700"
-                  disabled={items.length === 0}
-                  onClick={() => {
-                    toast({
-                      title: "Checkout",
-                      description: "This would proceed to checkout in a real shop!",
-                    });
-                  }}
-                >
-                  Proceed to Checkout
-                </Button>
+                <div className="space-y-2">
+                  <Button 
+                    className="w-full bg-teal-600 hover:bg-teal-700"
+                    disabled={items.length === 0}
+                    onClick={handleCheckout}
+                  >
+                    Proceed to Checkout
+                  </Button>
+                  
+                  <Button 
+                    className="w-full" 
+                    variant="outline"
+                    onClick={() => setShowCart(false)}
+                  >
+                    Continue Shopping
+                  </Button>
+                </div>
               </div>
             </div>
           </div>

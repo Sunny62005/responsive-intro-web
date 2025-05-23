@@ -13,9 +13,12 @@ import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Shop from "./pages/Shop";
+import CheckoutPage from "./pages/shop/CheckoutPage";
+import OrderConfirmation from "./pages/shop/OrderConfirmation";
 import { ThemeProvider } from "./components/ThemeProvider";
 import { CookieConsent } from "./components/CookieConsent";
 import ProductDetail from "./pages/ProductDetail";
+import Analytics from "./components/Analytics";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +29,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <Analytics />
           <Navbar />
           <main>
             <Routes>
@@ -35,6 +39,8 @@ const App = () => (
               <Route path="/personal" element={<Personal />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/shop" element={<Shop />} />
+              <Route path="/shop/checkout" element={<CheckoutPage />} />
+              <Route path="/shop/confirmation" element={<OrderConfirmation />} />
               <Route path="/product/:id" element={<ProductDetail />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
