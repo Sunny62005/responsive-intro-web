@@ -1,10 +1,10 @@
-
 import React, { useEffect, useState } from "react";
 import HeroSection from "@/components/HeroSection";
 import ProfileCard from "@/components/ProfileCard";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import { ExternalLink } from "lucide-react";
 
 interface ProfileData {
   name: string;
@@ -17,6 +17,14 @@ const Index = () => {
   const [profileData, setProfileData] = useState<ProfileData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
+
+  const dayAssignments = [
+    { day: "Day 1", url: "https://soft-raindrop-493f16.netlify.app/" },
+    { day: "Day 2", url: "https://delightful-clafoutis-0b8aa1.netlify.app/" },
+    { day: "Day 3", url: "https://sunny62005.github.io/Sunny1/" },
+    { day: "Day 4", url: "https://responsive-intro-web.lovable.app/about" },
+    { day: "Day 5", url: "https://responsive-intro-web.lovable.app/about" }
+  ];
 
   useEffect(() => {
     const fetchData = async () => {
@@ -49,6 +57,26 @@ const Index = () => {
       <HeroSection />
       
       <div className="container mx-auto px-4 py-16">
+        {/* Daywise Assignments Section */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold mb-8 text-center">Daywise Assignments</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            {dayAssignments.map((assignment, index) => (
+              <Card key={index} className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-4">
+                  <Button
+                    onClick={() => window.open(assignment.url, '_blank')}
+                    className="w-full bg-teal-600 hover:bg-teal-700 text-white"
+                  >
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    {assignment.day}
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div>
             <h2 className="text-3xl font-bold mb-6">About Me</h2>
