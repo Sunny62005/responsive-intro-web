@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 
 interface Plan {
@@ -7,11 +7,36 @@ interface Plan {
   description: string;
 }
 
-interface NextPlansProps {
-  plans: Plan[];
-}
-
-const NextPlans: React.FC<NextPlansProps> = ({ plans }) => {
+const NextPlans: React.FC = () => {
+  const [plans, setPlans] = useState<Plan[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        // Updated path to work in both development and production
+        const response = await fetch('/data.json');
+        const data = await response.json();
+        setPlans(data.nextPlans || []);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+        setPlans([]);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    
+    fetchData();
+  }, []);
+  
+  if (isLoading) {
+    return (
+      <div className="py-8">
+        <p className="text-center">Loading plans...</p>
+      </div>
+    );
+  }
+  
   return (
     <section className="py-12 bg-muted/30">
       <div className="container mx-auto px-4">

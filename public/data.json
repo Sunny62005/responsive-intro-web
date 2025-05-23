@@ -1,0 +1,179 @@
+
+{
+  "profile": {
+    "name": "Sunny Pharande",
+    "title": "Software Developer",
+    "location": "Palghar, Maharashtra",
+    "email": "sunnypharande777@gmail.com",
+    "phone": "8847782768",
+    "bio": "Passionate software developer with a focus on creating intuitive and efficient web applications. Experienced in modern web technologies and committed to delivering high-quality solutions.",
+    "photo": "",
+    "videoIntro": "https://www.youtube.com/embed/HXHphpDJ9T0?si=03oqu9YuNm7RUUKo"
+  },
+  "education": [
+    {
+      "degree": "Computer Engineering",
+      "institution": "Mumbai University"
+    }
+  ],
+  "languages": [
+    {
+      "name": "English",
+      "proficiency": "Fluent"
+    },
+    {
+      "name": "Hindi",
+      "proficiency": "Native"
+    },
+    {
+      "name": "Marathi",
+      "proficiency": "Native"
+    }
+  ],
+  "achievements": [
+    {
+      "title": "First Prize - Global Hackathon 2024",
+      "description": "Led a team that developed an AI-powered solution for climate change monitoring."
+    },
+    {
+      "title": "Outstanding Research Award",
+      "description": "Recognized for contributions to distributed systems research."
+    },
+    {
+      "title": "Open Source Contributor",
+      "description": "Contributed to several popular open source projects including React and Node.js."
+    },
+    {
+      "title": "Web Accessibility Champion",
+      "description": "Improved accessibility standards across multiple projects, ensuring WCAG compliance."
+    },
+    {
+      "title": "Tech Community Leader",
+      "description": "Founded a local developer meetup group with over 500 active members."
+    }
+  ],
+  "futureGoals": [
+    {
+      "title": "Build a Tech Startup",
+      "description": "Create innovative solutions that address pressing global challenges."
+    },
+    {
+      "title": "Mentor 100+ Developers",
+      "description": "Give back to the community by mentoring aspiring developers."
+    },
+    {
+      "title": "Write a Book on Modern Web Development",
+      "description": "Share knowledge and experiences with the wider development community."
+    },
+    {
+      "title": "Master NextJS and Supabase",
+      "description": "Deepen knowledge of modern frameworks and backend solutions."
+    },
+    {
+      "title": "Contribute to Open Source",
+      "description": "Make meaningful contributions to major open source projects."
+    }
+  ],
+  "hobbies": [
+    {
+      "name": "Photography",
+      "description": "Capturing landscapes and street life allows me to see the world through a different lens."
+    },
+    {
+      "name": "Hiking",
+      "description": "Exploring nature trails helps me disconnect and find inspiration."
+    },
+    {
+      "name": "Chess",
+      "description": "Strategic thinking and planning that translates well to problem-solving in code."
+    }
+  ],
+  "roleModels": [
+    {
+      "name": "Ada Lovelace",
+      "reason": "The first computer programmer who saw beyond the calculator to the computer's potential."
+    },
+    {
+      "name": "Elon Musk",
+      "reason": "His ambitious vision and relentless drive to solve humanity's biggest challenges."
+    },
+    {
+      "name": "Grace Hopper",
+      "reason": "Pioneer in computer programming who invented one of the first compiler tools."
+    }
+  ],
+  "books": [
+    {
+      "title": "Sapiens: A Brief History of Humankind",
+      "author": "Yuval Noah Harari",
+      "reason": "Changed my perspective on human history and our collective future."
+    },
+    {
+      "title": "Clean Code",
+      "author": "Robert C. Martin",
+      "reason": "Shaped how I approach software development and code quality."
+    },
+    {
+      "title": "The Innovators",
+      "author": "Walter Isaacson",
+      "reason": "Inspiring stories of the digital revolution's pioneers."
+    }
+  ],
+  "websites": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com",
+      "reason": "The heart of open source collaboration and code sharing."
+    },
+    {
+      "name": "Stack Overflow",
+      "url": "https://stackoverflow.com",
+      "reason": "An invaluable resource for solving programming challenges."
+    },
+    {
+      "name": "Hacker News",
+      "url": "https://news.ycombinator.com",
+      "reason": "Keeps me updated on the latest in tech and startups."
+    }
+  ],
+  "startups": [
+    {
+      "name": "Stripe",
+      "reason": "Revolutionized online payments with developer-friendly APIs."
+    },
+    {
+      "name": "Notion",
+      "reason": "Reimagined productivity tools for the modern workplace."
+    },
+    {
+      "name": "Vercel",
+      "reason": "Made frontend deployment and optimization incredibly accessible."
+    }
+  ],
+  "socialLinks": {
+    "github": "https://github.com/Sunny62005",
+    "instagram": "https://www.instgram.com/sunnypharande"
+  },
+  "nextPlans": [
+    {
+      "title": "Learn React Fundamentals",
+      "description": "Master core React concepts including hooks, state management, and component lifecycle."
+    },
+    {
+      "title": "Practice Git Version Control",
+      "description": "Get comfortable with branches, merging, and collaborative workflows."
+    },
+    {
+      "title": "NextJS Project",
+      "description": "Convert existing HTML/CSS projects to NextJS and implement app router."
+    },
+    {
+      "title": "Vercel Deployment",
+      "description": "Deploy projects to Vercel for production hosting."
+    },
+    {
+      "title": "Supabase Integration",
+      "description": "Learn database design, authentication, and backend services with Supabase."
+    }
+  ]
+}

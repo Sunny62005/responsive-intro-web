@@ -11,7 +11,8 @@ const Analytics = () => {
     const trackPageView = () => {
       console.log('Page view tracked:', {
         page: location.pathname,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
+        environment: import.meta.env.MODE || 'production'
       });
       
       // This is where you would normally send analytics data to a service
