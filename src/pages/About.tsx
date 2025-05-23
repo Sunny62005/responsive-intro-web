@@ -1,11 +1,9 @@
-
 import React, { useEffect, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 
 interface Education {
   degree: string;
   institution: string;
-  year: string;
 }
 
 interface Language {
@@ -30,7 +28,8 @@ const About = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/src/data/data.json');
+        // Updated path to work in both development and production
+        const response = await fetch('/data.json');
         const data = await response.json();
         setProfileData(data.profile);
         setEducation(data.education);
@@ -96,7 +95,6 @@ const About = () => {
                     <div key={index} className="border-l-4 border-teal-600 pl-4">
                       <h3 className="font-bold text-lg">{edu.degree}</h3>
                       <p className="text-gray-600 dark:text-gray-400">{edu.institution}</p>
-                      <p className="text-gray-600 dark:text-gray-400">{edu.year}</p>
                     </div>
                   ))}
                 </div>
